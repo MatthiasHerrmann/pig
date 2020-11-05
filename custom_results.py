@@ -14,6 +14,12 @@ def getresults2(numrandomtasks=10000, n_best=10, tmpdirectory="tmp"):
     Collects these into a histogram and dumps them into the results directory.
     Also takes the n_best Featurelists with the best average F1-Scores and dumps them too.
 
+    Warning:
+      This program will not work correctly if:
+        - numrandomtasks is not the correct value
+        - pig.py was executed with other feature selection methods than --random
+        - pig.py was executed with more than one classifier
+
     Example:
       - Executed pig.py --random 40 10000 -n 7
       => Results in 70000 files with 40 features each.
